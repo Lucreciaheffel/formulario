@@ -1,0 +1,115 @@
+:root{
+    --primary-color:#f1356d;
+    --dark-mode: #101010;
+    --ligth-mode: white
+}
+
+*body{
+    line-height: 1.6rem;
+    background: var(--dark-mode);
+    color: var(--light-mode)
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0 1.5rem;
+}
+       
+.content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+.logo{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.logo spam{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.contact-wrapper{
+    box-shadow: 0 0 20px #ffffff43;
+    border-radius: 8px;
+    
+}
+.contact-wrapper>* {
+    padding: 1rem;
+}
+.contact-form{
+    background: #e2dfdf;
+    border-radius: 8px;
+}
+.contact-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form form p{
+    margin: 0;
+    padding: 1rem;
+}
+.contact-form form .block{
+    grid-column-start: 1;
+    grid-column-end: 3; /* grid-column:1/3; hace lo mismo*/
+}
+.contact-form form input,
+.contact-form form textarea,
+.contact-form form buttom{
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--primary-color);
+    border-botton: 1px solid var(--primary-color);
+    background:none;
+}
+.block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-form form button{
+    max-width: 300px;
+    background: var(--primary-color);
+    text-transform: uppercase;
+    color: var(--light-mode);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    border:0;
+    transition: all 0.3s ease;
+}
+.contact-form form button:hover{
+    background: #c86b98;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    filter: blur(0px);
+}
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+@media (min-width:760px){
+    body{
+        padding: 0 4rem;
+    }
+    .contact-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper{
+        padding: 2rem;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align-last: left;
+    }
+}
